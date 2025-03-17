@@ -16,8 +16,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <250>;
-            // quick_tap_ms = <0>;
+            tapping-term-ms = <250>;
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -25,7 +24,7 @@
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -71,6 +70,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        corner_bootloader {
+            timeout-ms = <100>;
+            key-positions = <0 9 20 29>;
+            bindings = <&bootloader>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -83,6 +91,7 @@
         compatible = "zmk,keymap";
 
         base {
+            display-name = "Base";
             bindings = <
             &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
             &kp A           &lhm LCTRL R    &lhm LALT S     &lhm LGUI T     &kp G                                           &kp M           &rhm LGUI N     &rhm LALT E     &rhm LCTRL I    &kp O
@@ -92,6 +101,7 @@
         };
 
         nav {
+            display-name = "Nav";
             bindings = <
             &trans          &trans          &trans          &trans          &trans                                          &kp PAGE_UP     &kp LC(PG_UP)   &kp UP          &kp LC(PG_DN)   &kp DELETE
             &trans          &kp LCTRL       &kp LALT        &kp LGUI        &trans                                          &kp PAGE_DOWN   &kp LEFT        &kp DOWN        &kp RIGHT       &kp BSLH
@@ -101,6 +111,7 @@
         };
 
         sym {
+            display-name = "Sym";
             bindings = <
             AS(N1)          AS(N2)          AS(N3)          AS(N4)          AS(N5)                                          AS(N6)          AS(N7)          AS(N8)          AS(N9)          AS(N0)
             AS(GRAVE)       &sk LCTRL       &sk LALT        &sk LGUI        &sk LC(LALT)                                    AS(BSLH)        AS(MINUS)       AS(EQUAL)       AS(LBKT)        AS(RBKT)
@@ -110,9 +121,10 @@
         };
 
         adj {
+            display-name = "Adj";
             bindings = <
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR_ALL                                  &kp C_SLEEP     &trans          &trans          &kp C_BRI_DN    &kp C_BRI_UP
-            &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
+            &studio_unlock  &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &kp C_VOL_DN    &kp C_VOL_UP
             &bootloader     &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &bootloader
                                                                             &trans          &trans          &trans          &trans
             >;

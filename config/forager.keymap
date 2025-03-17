@@ -201,6 +201,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        display-name = "Base";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T              &kp Y        &kp U         &kp I         &kp O         &kp P   
@@ -214,6 +215,7 @@
                         >;
                 };
                 colemak_layer {
+                        display-name = "Colemak";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y       &kp APOS   
@@ -227,6 +229,7 @@
                         >;
                 };
                 lower_layer {
+                        display-name = "Lower";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp N1        &kp N2        &kp N3        &kp N4        &kp N5             &kp N6       &kp N7        &kp N8        &kp N9        &kp N0  
@@ -241,6 +244,7 @@
                 };
 
                 raise_layer {
+                        display-name = "Raise";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS &kp KP_MULTIPLY    &kp LPAR      &kp RPAR
@@ -254,6 +258,7 @@
                         >;
                 };
                 num_layer {
+                        display-name = "Num";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
       &kp TILDE       &kp AT       &kp LBRC      &kp RBRC     &kp PRCNT          &kp STAR       &kp N7        &kp N8        &kp N9      &kp MINUS
@@ -268,6 +273,7 @@
                 };
 
                 nav_layer {
+                        display-name = "Nav";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &trans        &trans        &trans        &trans        &trans            &trans       &kp HOME      &kp END       &kp TAB     &super_bspc
@@ -281,6 +287,7 @@
                         >;
                 };
                 fun_layer {
+                        display-name = "Func";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
      &tog COLEMAK  &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG        &trans        &kp F7        &kp F8        &kp F9       &kp F12
